@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Break Puzzle" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Break Puzzle" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Break Puzzle" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add option="-lmingw32" />
+			<Add option="-lSDLmain" />
+			<Add option="-lSDL" />
+			<Add library="C:/MinGW/lib/libfmodex.a" />
+			<Add library="C:/MinGW/lib/SDL_ttf.lib" />
+		</Linker>
+		<Unit filename="conditions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="conditions.h" />
+		<Unit filename="initialisations.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="initialisations.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modepc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modepc.h" />
+		<Unit filename="partie.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="partie.h" />
+		<Unit filename="pieces.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="pieces.h" />
+		<Unit filename="sauvegarde.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sauvegarde.h" />
+		<Unit filename="sons.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sons.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

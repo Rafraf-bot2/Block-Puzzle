@@ -1,0 +1,833 @@
+# depslib dependency file v1.0
+1542185325 source:c:\users\adel\desktop\tp\break puzzle\partie.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"pieces.h"
+
+1542142905 source:c:\users\adel\desktop\tp\break puzzle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+
+1542136115 c:\users\adel\desktop\tp\break puzzle\partie.h
+
+1542142686 c:\users\adel\desktop\tp\break puzzle\initialisations.h
+
+1542142686 source:c:\users\adel\desktop\tp\break puzzle\initialisations.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+
+1542109174 source:c:\users\adel\desktop\tp\break puzzle\pieces.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<time.h>
+
+1542142091 c:\users\adel\desktop\tp\break puzzle\pieces.h
+
+1542326968 source:f:\break\initialisations.c
+	<stdio.h>
+	<stdlib.h>
+
+1542394563 source:f:\break\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+
+1542205961 f:\break\partie.h
+
+1542142091 f:\break\pieces.h
+
+1542205042 f:\break\initialisations.h
+
+1542323804 source:f:\break\partie.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"pieces.h"
+
+1542205820 source:f:\break\pieces.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<time.h>
+
+1542217318 source:f:\break\sons.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+
+1542217318 f:\break\sons.h
+
+1542327212 f:\break\conditions.h
+
+1542440279 source:f:\break\conditions.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+
+1542440279 source:f:\break\break\conditions.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+
+1542326968 source:f:\break\break\initialisations.c
+	<stdio.h>
+	<stdlib.h>
+
+1545419800 source:f:\break\break\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+
+1545416691 f:\break\break\partie.h
+
+1542142091 f:\break\break\pieces.h
+
+1542205042 f:\break\break\initialisations.h
+
+1542217318 f:\break\break\sons.h
+
+1542327212 f:\break\break\conditions.h
+
+1545416265 source:f:\break\break\partie.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"pieces.h"
+
+1545300596 source:f:\break\break\pieces.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<time.h>
+
+1545294800 source:f:\break\break\sons.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+
+1542440279 source:f:\copies projet\break[test mode ia]\break\conditions.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+
+1542326968 source:f:\copies projet\break[test mode ia]\break\initialisations.c
+	<stdio.h>
+	<stdlib.h>
+
+1545789528 source:f:\copies projet\break[test mode ia]\break\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+	"modepc.h"
+
+1545790243 f:\copies projet\break[test mode ia]\break\partie.h
+
+1542142091 f:\copies projet\break[test mode ia]\break\pieces.h
+
+1542205042 f:\copies projet\break[test mode ia]\break\initialisations.h
+
+1542217318 f:\copies projet\break[test mode ia]\break\sons.h
+
+1542327212 f:\copies projet\break[test mode ia]\break\conditions.h
+
+1545789449 source:f:\copies projet\break[test mode ia]\break\partie.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"pieces.h"
+	"modepc.h"
+
+1545300596 source:f:\copies projet\break[test mode ia]\break\pieces.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<time.h>
+
+1545294800 source:f:\copies projet\break[test mode ia]\break\sons.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+
+1545787494 source:f:\copies projet\break[test mode ia]\break\modepc.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+
+1545785716 f:\copies projet\break[test mode ia]\break\modepc.h
+
+1542440279 source:f:\copies projet\break[ ia 2]\conditions.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+
+1542326968 source:f:\copies projet\break[ ia 2]\initialisations.c
+	<stdio.h>
+	<stdlib.h>
+
+1545787494 source:f:\copies projet\break[ ia 2]\modepc.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+
+1545790243 f:\copies projet\break[ ia 2]\partie.h
+
+1542142091 f:\copies projet\break[ ia 2]\pieces.h
+
+1542205042 f:\copies projet\break[ ia 2]\initialisations.h
+
+1542217318 f:\copies projet\break[ ia 2]\sons.h
+
+1542327212 f:\copies projet\break[ ia 2]\conditions.h
+
+1545790245 source:f:\copies projet\break[ ia 2]\partie.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"pieces.h"
+	"initialisations.h"
+	"modepc.h"
+
+1545785716 f:\copies projet\break[ ia 2]\modepc.h
+
+1545300596 source:f:\copies projet\break[ ia 2]\pieces.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<time.h>
+
+1545294800 source:f:\copies projet\break[ ia 2]\sons.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+
+1545790417 source:f:\copies projet\break[ ia 2]\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+	"modepc.h"
+
+1546138156 source:f:\copies projet\break mode 3\conditions.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"initialisations.h"
+	"partie.h"
+	"modepc.h"
+	"pieces.h"
+
+1546136392 source:f:\copies projet\break mode 3\initialisations.c
+	<stdio.h>
+	<stdlib.h>
+
+1546138916 source:f:\copies projet\break mode 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+	"modepc.h"
+
+1545933731 f:\copies projet\break mode 3\partie.h
+
+1545928647 f:\copies projet\break mode 3\pieces.h
+
+1546136392 f:\copies projet\break mode 3\initialisations.h
+
+1542217318 f:\copies projet\break mode 3\sons.h
+
+1546137432 f:\copies projet\break mode 3\conditions.h
+
+1546124386 f:\copies projet\break mode 3\modepc.h
+
+1546124386 source:f:\copies projet\break mode 3\modepc.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+
+1545939675 source:f:\copies projet\break mode 3\pieces.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<time.h>
+
+1545294800 source:f:\copies projet\break mode 3\sons.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+
+1545941524 source:f:\copies projet\break mode 3\partie.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"pieces.h"
+	"initialisations.h"
+	"modepc.h"
+
+1546138156 source:f:\copies projet\break mode 3 - stopito\conditions.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"initialisations.h"
+	"partie.h"
+	"modepc.h"
+	"pieces.h"
+
+1546136392 f:\copies projet\break mode 3 - stopito\initialisations.h
+
+1545933731 f:\copies projet\break mode 3 - stopito\partie.h
+
+1546124386 f:\copies projet\break mode 3 - stopito\modepc.h
+
+1545928647 f:\copies projet\break mode 3 - stopito\pieces.h
+
+1546136392 source:f:\copies projet\break mode 3 - stopito\initialisations.c
+	<stdio.h>
+	<stdlib.h>
+
+1546124386 source:f:\copies projet\break mode 3 - stopito\modepc.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+
+1542217318 f:\copies projet\break mode 3 - stopito\sons.h
+
+1546137432 f:\copies projet\break mode 3 - stopito\conditions.h
+
+1545941524 source:f:\copies projet\break mode 3 - stopito\partie.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"pieces.h"
+	"initialisations.h"
+	"modepc.h"
+
+1545939675 source:f:\copies projet\break mode 3 - stopito\pieces.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<time.h>
+
+1545294800 source:f:\copies projet\break mode 3 - stopito\sons.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+
+1546205835 source:f:\copies projet\break mode 3 - stopito\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+	"modepc.h"
+
+1546138156 source:f:\break mode 3 - stopito\conditions.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"initialisations.h"
+	"partie.h"
+	"modepc.h"
+	"pieces.h"
+
+1546136392 f:\break mode 3 - stopito\initialisations.h
+
+1545933731 f:\break mode 3 - stopito\partie.h
+
+1546124386 f:\break mode 3 - stopito\modepc.h
+
+1545928647 f:\break mode 3 - stopito\pieces.h
+
+1546136392 source:f:\break mode 3 - stopito\initialisations.c
+	<stdio.h>
+	<stdlib.h>
+
+1546124386 source:f:\break mode 3 - stopito\modepc.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+
+1542217318 f:\break mode 3 - stopito\sons.h
+
+1546137432 f:\break mode 3 - stopito\conditions.h
+
+1546206204 source:f:\break mode 3 - stopito\partie.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"pieces.h"
+	"initialisations.h"
+	"modepc.h"
+
+1545939675 source:f:\break mode 3 - stopito\pieces.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<time.h>
+
+1545294800 source:f:\break mode 3 - stopito\sons.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+
+1546136392 source:f:\break mode 3 - animatio\initialisations.c
+	<stdio.h>
+	<stdlib.h>
+
+1546372718 source:f:\break mode 3 - animatio\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<SDL/SDL_ttf.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+	"modepc.h"
+
+1546368245 f:\break mode 3 - animatio\partie.h
+	<SDL/SDL_ttf.h>
+
+1545928647 f:\break mode 3 - animatio\pieces.h
+
+1546136392 f:\break mode 3 - animatio\initialisations.h
+
+1546345243 f:\break mode 3 - animatio\sons.h
+	<SDL/SDL_ttf.h>
+
+1546370222 f:\break mode 3 - animatio\conditions.h
+
+1546367330 f:\break mode 3 - animatio\modepc.h
+
+1546370656 source:f:\break mode 3 - animatio\modepc.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+
+1546369893 source:f:\break mode 3 - animatio\partie.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<SDL/SDL_ttf.h>
+	<fmod/fmod.h>
+	<time.h>
+	"pieces.h"
+	"initialisations.h"
+	"modepc.h"
+	"sons.h"
+
+1545939675 source:f:\break mode 3 - animatio\pieces.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<time.h>
+
+1546372170 source:f:\break mode 3 - animatio\sons.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<SDL/SDL_ttf.h>
+
+1546370985 source:f:\break mode 3 - animatio\conditions.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"initialisations.h"
+	"partie.h"
+	"modepc.h"
+	"pieces.h"
+	"sons.h"
+
+1546370985 source:f:\break mode 3 - animatio - copie\conditions.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"initialisations.h"
+	"partie.h"
+	"modepc.h"
+	"pieces.h"
+	"sons.h"
+
+1546561210 f:\break mode 3 - animatio - copie\initialisations.h
+
+1546368245 f:\break mode 3 - animatio - copie\partie.h
+	<SDL/SDL_ttf.h>
+
+1546367330 f:\break mode 3 - animatio - copie\modepc.h
+
+1545928647 f:\break mode 3 - animatio - copie\pieces.h
+
+1546345243 f:\break mode 3 - animatio - copie\sons.h
+	<SDL/SDL_ttf.h>
+
+1546136392 source:f:\break mode 3 - animatio - copie\initialisations.c
+	<stdio.h>
+	<stdlib.h>
+
+1546783012 source:f:\break mode 3 - animatio - copie\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<SDL/SDL_ttf.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+	"modepc.h"
+
+1546370222 f:\break mode 3 - animatio - copie\conditions.h
+
+1546370656 source:f:\break mode 3 - animatio - copie\modepc.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+
+1545939675 source:f:\break mode 3 - animatio - copie\pieces.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<time.h>
+
+1546471772 source:f:\break mode 3 - animatio - copie\sons.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<SDL/SDL_ttf.h>
+
+1546783697 source:f:\break mode 3 - animatio - copie\partie.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<SDL/SDL_ttf.h>
+	<fmod/fmod.h>
+	<time.h>
+	"pieces.h"
+	"initialisations.h"
+	"modepc.h"
+	"sons.h"
+
+1546635567 source:f:\break mode 3 - animatio - copie\sauvegarde.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+	"modepc.h"
+
+1546370985 source:f:\break mode 3 leggo\conditions.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"initialisations.h"
+	"partie.h"
+	"modepc.h"
+	"pieces.h"
+	"sons.h"
+
+1546561210 f:\break mode 3 leggo\initialisations.h
+
+1546368245 f:\break mode 3 leggo\partie.h
+	<SDL/SDL_ttf.h>
+
+1546367330 f:\break mode 3 leggo\modepc.h
+
+1545928647 f:\break mode 3 leggo\pieces.h
+
+1546345243 f:\break mode 3 leggo\sons.h
+	<SDL/SDL_ttf.h>
+
+1546136392 source:f:\break mode 3 leggo\initialisations.c
+	<stdio.h>
+	<stdlib.h>
+
+1547680019 source:f:\break mode 3 leggo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<SDL/SDL_ttf.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+	"modepc.h"
+
+1546370222 f:\break mode 3 leggo\conditions.h
+
+1546370656 source:f:\break mode 3 leggo\modepc.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+
+1546783697 source:f:\break mode 3 leggo\partie.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<SDL/SDL_ttf.h>
+	<fmod/fmod.h>
+	<time.h>
+	"pieces.h"
+	"initialisations.h"
+	"modepc.h"
+	"sons.h"
+
+1545939675 source:f:\break mode 3 leggo\pieces.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<time.h>
+
+1546635567 source:f:\break mode 3 leggo\sauvegarde.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+	"modepc.h"
+
+1546985059 source:f:\break mode 3 leggo\sons.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<SDL/SDL_ttf.h>
+
+1546374585 source:f:\break puzzle fin\conditions.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"initialisations.h"
+	"partie.h"
+	"modepc.h"
+	"pieces.h"
+	"sons.h"
+
+1546564810 f:\break puzzle fin\initialisations.h
+
+1546371845 f:\break puzzle fin\partie.h
+	<SDL/SDL_ttf.h>
+
+1546370930 f:\break puzzle fin\modepc.h
+
+1545932247 f:\break puzzle fin\pieces.h
+
+1546348843 f:\break puzzle fin\sons.h
+	<SDL/SDL_ttf.h>
+
+1546139992 source:f:\break puzzle fin\initialisations.c
+	<stdio.h>
+	<stdlib.h>
+
+1547700075 source:f:\break puzzle fin\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<SDL/SDL_ttf.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+	"modepc.h"
+
+1546373822 f:\break puzzle fin\conditions.h
+
+1546374256 source:f:\break puzzle fin\modepc.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+
+1547699999 source:f:\break puzzle fin\partie.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<SDL/SDL_ttf.h>
+	<fmod/fmod.h>
+	<time.h>
+	"pieces.h"
+	"initialisations.h"
+	"modepc.h"
+	"sons.h"
+
+1545943275 source:f:\break puzzle fin\pieces.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<time.h>
+
+1546639167 source:f:\break puzzle fin\sauvegarde.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<time.h>
+	"partie.h"
+	"pieces.h"
+	"initialisations.h"
+	"sons.h"
+	"conditions.h"
+	"modepc.h"
+
+1546988659 source:f:\break puzzle fin\sons.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<fmod/fmod.h>
+	<SDL/SDL_ttf.h>
+

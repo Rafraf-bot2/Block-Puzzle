@@ -1,0 +1,245 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <SDL/SDL.h>
+#include <fmod/fmod.h>
+#include <time.h>
+#include "partie.h"
+#include "pieces.h"
+#include "initialisations.h"
+#include "sons.h"
+#include "conditions.h"
+#include "modepc.h"
+
+int main(int argc, char *argv[])
+{
+    /*declaration des surfaces */
+    SDL_Surface *ecran = NULL, *acceuil = NULL, *tuto=NULL, *grille=NULL,*background=NULL, *piece=NULL, *menupause=NULL;
+
+    /* declaration des positions */
+    SDL_Rect positionMenu,positionTuto,position_piece,positionMiniMenu;
+
+    /* lancer SDL */
+    SDL_Init(SDL_INIT_VIDEO);
+    SDL_WM_SetIcon(SDL_LoadBMP("icone.bmp"), NULL);     /* icone du jeu */
+    ecran = SDL_SetVideoMode(1024, 768, 32, SDL_HWSURFACE | SDL_DOUBLEBUF | SDL_FULLSCREEN);    /*resolution de l'image*/
+
+    /*le titre du jeu*/
+    SDL_WM_SetCaption("Block Puzzle", NULL);
+    /*charge les images de l'acceuil et du tutoriel*/
+    acceuil = SDL_LoadBMP("MenuBouton.bmp");tuto=SDL_LoadBMP("tuto.bmp");
+
+
+    /*initialiser les positions de l'acceuil et du tuto*/
+    positionMenu.x = ecran->w / 2 - acceuil->w / 2; positionTuto.x=ecran->w / 2 - tuto->w / 2;
+    positionMenu.y = ecran->h / 2 - acceuil->h / 2; positionTuto.y=200;
+
+musique_menu(); /* on lance la musique du menu*/
+
+    int partie_lancee; /*variable pour savoir  si on est dans un menu ou en jeu */
+    int menu_lance;    /*variable pour savoir dans quel menu on est*/
+    int mode_jeu;      /*variable pour savoir dans quel mode de jeu on est*/
+
+menu(acceuil,ecran,positionMenu,&partie_lancee,&menu_lance); /* blit le menu */
+
+     SDL_SetColorKey(tuto, SDL_SRCCOLORKEY, SDL_MapRGB(tuto->format, 100, 100, 100)); /*efface le gris de l'image du tuto */
+     SDL_BlitSurface(tuto, NULL, ecran, &positionTuto);                               /*blit le tuto */
+     SDL_Flip(ecran);                                                                 /*affiche l'ecran à jour*/
+
+    int matrice[11][11]={0};                   /* matrice pour savoir que contient chaque case de la grille */
+    int tab_piece_jouable[4]={0};              /* vecteur pour connaître les 3 pieces jouables en bas de l'ecran */
+    int tab_destru_l[6]; int tab_destru_c[6];  /* vecteurs pour savoir si une LIGNE ou une COLONNE est remplie*/
+
+    int continuer=1;         /*variable de contrôle , à 0 le programme se ferme */
+
+    int skiptuto=0;          /*skiptuto pour savoir si on a fermé le tuto ou pas*/
+
+    int piece_selected=0;    /*pour savoir si on a selectionné une pièce à jouer ou pas*/
+
+    int piece_put;           /*savoir si on a posé la pièce selectionnée ou pas*/
+
+    /*position du curseur */
+    SDL_Rect curseur;
+    /*emplacement sur la grille dans lequel on a posé la pièce*/
+    SDL_Rect positionPiecePosee;
+
+    int i,j,b;
+    int k,m;
+
+int gp;
+
+    SDL_Event event; /*type event pour savoir si les périphériques d'entrées ont été utilisés*/
+
+
+    while(continuer==1)            /*BOUCLE PRINCIPALE*/
+    {
+      SDL_WaitEvent(&event);
+        switch(event.type)
+        {
+         case SDL_KEYDOWN:                   /*savoir si on a appuyé sur une touche*/
+
+           switch (event.key.keysym.sym)
+           {
+            case SDLK_ESCAPE:                             /*clique sur échap*/
+
+         /*si la partie n'est PAS lancée on quitte le programme*/
+                if (partie_lancee==0 && menu_lance==1) continuer=0;
+                else if(piece_selected==0)
+        /*si la partie est lancée on revient au menu on blit le menu ET on remet le tableau des pieces jouables et la matrice de la grille à 0*/
+                {menu(acceuil,ecran,positionMenu,&partie_lancee,&menu_lance);initial_tab_piece_jouable(tab_piece_jouable);initial_matrice_grille(matrice);}
+                else{
+        /*si une pièce est selectionnée on la lâche */
+                        piece_selected=0; SDL_ShowCursor(SDL_ENABLE);
+                        Proc_grille(grille,ecran,background,positionMenu,matrice,&partie_lancee,mode_jeu);
+                        show_playable(ecran,tab_piece_jouable,piece_selected);
+                    }
+              break;
+           }
+            case SDL_MOUSEBUTTONUP:
+            if (event.button.button==SDL_BUTTON_LEFT)     /*clique bouton gauche souris*/
+            {
+               /*fermer la fenêtre du tuto*/
+               if(skiptuto==0 && event.button.x>=698&&event.button.x<=717 && event.button.y>=340&& event.button.y<=367)
+               {
+                    skiptuto=1;
+                    menu(acceuil,ecran,positionMenu,&partie_lancee,&menu_lance);
+                    SDL_FreeSurface(tuto);
+               }
+               /*bouton passer au menu 2 (choisir le type de partie)*/
+               if(skiptuto==1 && partie_lancee==0 && menu_lance==1 && event.button.x>=367&&event.button.x<=637 && event.button.y>=345&& event.button.y<=421)
+               {
+                   menu2 (acceuil,ecran,positionMenu,&menu_lance);
+               }
+               /*bouton quitter le programme quand on est au menu 1*/
+               else if(skiptuto==1 && partie_lancee==0 && menu_lance==1 &&event.button.x>=367&&event.button.x<=637 && event.button.y>=487&& event.button.y<=564)
+               {
+                   continuer=0;
+               }
+               //bouton pour choisir le mode JOUEUR
+               else if(skiptuto==1 && partie_lancee==0 && menu_lance==2 &&event.button.x>=373&&event.button.x<=635 && event.button.y>=275&& event.button.y<=356)
+               {
+                   mode_jeu=1;
+                   Proc_grille(grille,ecran,background,positionMenu,matrice,&partie_lancee,mode_jeu);
+                   Remplir_piece_jouable(ecran,tab_piece_jouable);
+               }
+
+               else if(skiptuto==1 && partie_lancee==0 && menu_lance==2 &&event.button.x>=373&&event.button.x<=635 && event.button.y>=405&& event.button.y<=485)
+               {
+                   mode_jeu=2;
+                   Proc_grille(grille,ecran,background,positionMenu,matrice,&partie_lancee,mode_jeu);
+                   Remplir_piece_jouable(ecran,tab_piece_jouable);
+               }
+
+               else if(skiptuto==1 && partie_lancee==0 && menu_lance==2 &&event.button.x>=373&&event.button.x<=635 && event.button.y>=533&& event.button.y<=612)
+               {
+                   mode_jeu=3;
+                   Proc_grille(grille,ecran,background,positionMenu,matrice,&partie_lancee,mode_jeu);
+                   Remplir_piece_jouable(ecran,tab_piece_jouable);
+               }
+
+               else if (partie_lancee==1&&event.button.x>=912&&event.button.x<=980 && event.button.y>=30&& event.button.y<=100)
+               {
+                   menu_en_jeu(ecran,menupause,positionMiniMenu,&menu_lance);
+               }
+
+               else if(menu_lance==4)
+               {
+                    if(event.button.x>=478&&event.button.x<=532 && event.button.y>=288&& event.button.y<=342)
+                    {
+                        Proc_grille(grille,ecran,background,positionMenu,matrice,&partie_lancee,mode_jeu);
+                        show_playable(ecran,tab_piece_jouable,piece_selected);
+                        menu_lance=0;
+                    }
+                    else if (event.button.x>=600&&event.button.x<=655 && event.button.y>=288&& event.button.y<=342)
+                    {
+                        initial_matrice_grille(matrice);
+                        initial_tab_piece_jouable(tab_piece_jouable);
+                        Proc_grille(grille,ecran,background,positionMenu,matrice,&partie_lancee,mode_jeu);
+                        Remplir_piece_jouable (ecran,tab_piece_jouable);
+                        menu_lance=0;
+                    }
+               }
+
+               else if (mode_jeu==2 && event.button.x>=0&&event.button.x<=1024 && event.button.y>=500&& event.button.y<=768)
+               {
+                  b=1;gp=-1;
+                  pc_pose(matrice,tab_piece_jouable,&gp,&b,&piece_put,ecran);
+                  if (b==1) partie_perdue(acceuil,ecran,positionMenu);
+               }
+               /*selection de pièces*/
+               else if(piece_selected==0 && mode_jeu==1 && partie_lancee==1 && event.button.x>=0&&event.button.x<=1024 && event.button.y>=500&& event.button.y<=768)
+                /* si on selectionne une pièce */
+               {
+                  if(piece_selected==0 && event.button.x>=0&&event.button.x<=340 && event.button.y>=500&& event.button.y<=768)
+                    piece_selected=1;
+                  if(piece_selected==0 && event.button.x>=350&&event.button.x<=682 && event.button.y>=500&& event.button.y<=768)
+                    piece_selected=2;
+                  if(piece_selected==0 && event.button.x>=685&&event.button.x<=1024 && event.button.y>=500&& event.button.y<=768)
+                    piece_selected=3;
+
+                  piece=la_piece(tab_piece_jouable[piece_selected]);   /* recevoir l'image de la pièce selectionnée*/
+
+                    case SDL_MOUSEMOTION:                              /*la pièce suit le curseur de la souris*/
+                         position_piece.x=event.motion.x; position_piece.y=event.motion.y;
+                         break;
+               }
+            }
+        }
+        if(piece_selected>0) /* SI ON A SELECTIONNE UNE PIECE*/
+        {
+          SDL_ShowCursor(SDL_DISABLE);
+         Proc_grille(grille,ecran,background,positionMenu,matrice,&partie_lancee,mode_jeu);              /*affiche la grille*/
+         show_playable(ecran,tab_piece_jouable,piece_selected);                                 /*affiche les pieces jouables*/
+         SDL_SetColorKey(piece, SDL_SRCCOLORKEY, SDL_MapRGB(piece->format, 255, 255, 255));
+         SDL_BlitSurface(piece,NULL,ecran,&position_piece);
+         SDL_Flip(ecran);
+                    if(SDL_MOUSEBUTTONUP)
+                {
+                    if (event.button.button==SDL_BUTTON_LEFT)
+                    {
+                        if(event.button.x>=250&&event.button.x<=750 && event.button.y>=0&& event.button.y<=500)
+                        {
+                            curseur.x=event.button.x+15; curseur.y=event.button.y+15;
+                            i=la_ligne(curseur); j=la_colonne(curseur);
+
+                            b=piece_posable(tab_piece_jouable[piece_selected],matrice,i,j);
+                            if (b==0)
+                            {
+                                SDL_ShowCursor(SDL_ENABLE);
+                                tab_piece_jouable[piece_selected]=0; piece_selected=0;
+                                Remplir_piece_jouable (ecran,tab_piece_jouable);
+                                piece_put=1;
+                            }
+                        }
+
+                    }
+                }
+
+        }
+        if(partie_lancee==1&&piece_put==1){
+                                initial_tab_destru(tab_destru_l,tab_destru_c);
+                                k=1;
+                                verif_explosion(matrice,tab_destru_l,tab_destru_c);
+                                while(tab_destru_l[k]!=0)
+                                {
+                                    for(m=1;m<=10;m++)
+                                    {
+                                        matrice[tab_destru_l[k]][m]=0;
+                                    }
+                                    k=k+1;
+                                }
+                                k=1;
+                                while(tab_destru_c[k]!=0)
+                                {
+                                    for(m=1;m<=10;m++)
+                                    {
+                                        matrice[m][tab_destru_c[k]]=0;
+                                    }
+                                    k=k+1;
+                                }
+                                Proc_grille(grille,ecran,background,positionMenu,matrice,&partie_lancee,mode_jeu);              /*affiche la grille*/
+                                show_playable(ecran,tab_piece_jouable,piece_selected);
+                                SDL_Flip(ecran);
+                                piece_put=0;}
+   }
+}
+
